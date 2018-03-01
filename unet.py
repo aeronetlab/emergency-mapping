@@ -1,14 +1,9 @@
-from keras import backend as K
-
 from keras.models import Model
 from keras.layers import Input
 from keras.layers import Conv2D
-from keras.layers import Cropping2D
-from keras.layers import Activation
 from keras.layers import concatenate
 from keras.layers import MaxPooling2D
 from keras.layers import UpSampling2D
-from keras.utils.data_utils import get_file
 from keras.layers.advanced_activations import ELU
 from keras.layers.normalization import BatchNormalization
 
@@ -17,6 +12,10 @@ def get_unet(input_shape, n_classes=1, n_filters=32):
     """
     UNet without crop. May be exposed to some uncertaineties near the boundaries, but works good on our tasks
     input shape should be with "channels_last"
+
+    :param input_shape: input shape of the images
+    :param n_classes: the number of classes for prediction mask
+    :param n_filters: parameter of the network, channels multiplier
     """
 
     inputs = Input(shape=(None, None, input_shape[-1]))

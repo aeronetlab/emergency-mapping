@@ -5,10 +5,9 @@ import numpy as np
 
 def read_img(path, read_pre=True, read_post=True):
     """
-    reading files from a folder in a 3-dimensional numpy array.
-    channels first
-    if both pre- and post- images are read, one 6-layer array is created, pre-event image first, post-event image last
-    without georeferencing
+    Reading files from a folder in a 3-dimensional numpy array. channels first,
+    if both pre- and post- images are read, one 6-layer array is created,
+    pre-event image first, post-event image last without georeferencing
 
     :param path: string, path to the folder with the files, for example './ventura_train/'
     :param read_pre: can be set to False if you do not want to read pre image
