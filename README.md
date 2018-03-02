@@ -31,3 +31,25 @@ raw satellite data fot the Santa Rosa area:
 santa_rosa_raw.zip
 2 large RGB files covering santa_rosa_test and santa_rosa_train areas as well as much more. They are georeferenced (lat-lon) and aligned to each other.
 
+#Docker instructions
+
+1. Image creation:
+
+docker build -t <image_name> .
+or if there is NVidia GPU and nvidia-docker:
+nvidia-docker build -t <image_name> .
+
+the Dockerfile can be used to create Docker container with all librares for DL analysis of aerial images.
+run of the image will open jupyter notebook server automatically.
+
+2. Run image 
+
+PASSWORD FOR JUPYTER NOTEBOOK: aeronet
+
+to start a container as background process use:
+docker run -d --rm -p <port_on_host>:8888 --name $(whoami) -v <your_folder>:<folder_in_container> -e "UID=$(id -u)" -e "GID=$(id -g)" <image_name>
+
+or if there is NVidia GPU and nvidia-docker:
+
+nvidia-docker run -d --rm -p <port_on_host>:8888 --name $(whoami) -v <your_folder>:<folder_in_container> -e "UID=$(id -u)" -e "GID=$(id -g)" <image_name>
+
