@@ -3,7 +3,7 @@ import rasterio
 import numpy as np
 
 
-def read_img(path, read_pre=True, read_post=True):
+def read_img(path, read_pre=True, read_post=True, pre_names=None, post_names=None):
     """
     Reading files from a folder in a 3-dimensional numpy array. channels first,
     if both pre- and post- images are read, one 6-layer array is created,
@@ -12,9 +12,13 @@ def read_img(path, read_pre=True, read_post=True):
     :param path: string, path to the folder with the files, for example './ventura_train/'
     :param read_pre: can be set to False if you do not want to read pre image
     :param read_post: can be set to False if you do not want to read post image
+    :param pre_names: filenames for R, G and B channel in pre-image
+    :param post_names: filenames for R, G and B channel in post-image
     """
-    pre_names = ['pre_r.tif', 'pre_g.tif', 'pre_b.tif']
-    post_names = ['post_r.tif', 'post_g.tif', 'post_b.tif']
+    if not pre_names:
+        pre_names = ['pre_r.tif', 'pre_g.tif', 'pre_b.tif']
+    if not post_names:
+        post_names = ['post_r.tif', 'post_g.tif', 'post_b.tif']
     
     # with rasterio.open(os.path.join(path, 'pre_r.tif')) as src:
     #    size = src.size
