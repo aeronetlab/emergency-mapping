@@ -1,4 +1,4 @@
-# map_augury
+# emergency-mapping
 Some useful utils and a sample pipeline for AeroNet dataset for the Innopolis hackathon.
 
 Utils allow to read and write the files (data_handling.py), and also contain a simple convolutionaal network on Keras (unet.py) with a generator for training and validation, and a Jupyter notebook with a sample pipeline of the data processing.
