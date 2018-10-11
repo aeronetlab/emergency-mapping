@@ -1,11 +1,14 @@
-# emergency-mapping
-Some useful utils and a sample pipeline for AeroNet dataset for the Innopolis hackathon.
+# Emergency-mapping
 
-Utils allow to read and write the files (data_handling.py), and also contain a simple convolutionaal network on Keras (unet.py) with a generator for training and validation, and a Jupyter notebook with a sample pipeline of the data processing.
+"Emergenсy mapping" is a workflow to detect damaged buildings in remote sensing imagery to reduce the time for decision making and relief efforts.
 
-Data is located at Google drive https://drive.google.com/drive/folders/1sFidThVrPKYJ7N0fW848toz2OhRU95cG
+Here are some useful utils and a sample pipeline for dataset of California region where a lot of buildings were destroyed by wildfires in 2017.
 
-This dataset contains satellite imagery before and after massive waildfires in California and partial markup.
+Utils allow to read and write the files (data_handling.py), and also contain a simple convolutional network on Keras (unet.py) with a generator for training and validation, and a Jupyter notebook with a sample pipeline of the data processing.
+
+Datataset is based on Opendata DigitalGlobe imagery and located at https://drive.google.com/open?id=1BVV7Smu7regYLloTd8HExyGmAKtoAJc4
+
+This dataset contains satellite imagery before and after massive wildfires in California and partial markup.
 
 prepared_data:
 1. Images with markup:
@@ -53,3 +56,9 @@ or if there is NVidia GPU and nvidia-docker:
 
 nvidia-docker run -d --rm -p <port_on_host>:8888 --name $(whoami) -v <your_folder>:<folder_in_container> -e "UID=$(id -u)" -e "GID=$(id -g)" <image_name>
 
+
+#License
+
+MIT License
+
+Data is licensed by DigitalGlobe under the terms of their Opendata programm: "The Open Data Program supports non-commercial use only" (https://www.digitalglobe.com/opendata/)
