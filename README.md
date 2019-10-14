@@ -1,6 +1,9 @@
-# Emergency-mapping
+Emergency-mapping
+-----------------
 
-"Emergenсy mapping" is a deeplearning method to detect damaged buildings in remote sensing imagery. Automatic mapping and detection is dedicated to reduce the time for decision making and response.
+*"Emergenсy mapping"* is a deeplearning method to detect damaged buildings in remote sensing imagery. Automatic mapping and detection is needed to reduce the time for decision making and response.
+
+# California 2017
 
 Here are some useful utils and a sample pipeline for dataset of California region where a lot of buildings were destroyed by wildfires in 2017.
 
@@ -61,3 +64,139 @@ nvidia-docker run -d --rm -p <port_on_host>:8888 --name $(whoami) -v <your_folde
 MIT License
 
 Data is licensed by DigitalGlobe under the terms of their Opendata programm: "The Open Data Program supports non-commercial use only" (https://www.digitalglobe.com/opendata/)
+
+
+# Florida 2018
+
+This dataset (~12K buildings with damage classes) is based on Google open aerial imagery after hurricane Michael hitted Florida coast. 
+Each of the labeled buildings has a geometrical contour and the appropirate class assignment whether it has no visible damages or was fully destroyed or partly damaged. 
+<table>
+  <tr>
+   <td><strong>ID</strong>
+   </td>
+   <td><strong>CLASS_NAME</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+   <td width="130px"><strong>Visual</strong>
+   </td>
+   <td><strong>Application domains</strong>
+   </td>
+  </tr>
+  <tr>
+   <td><p style="text-align: right">
+0</p>
+
+   </td>
+   <td>clutter
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="5" >
+<h2>Buildings and Construction</h2>
+
+
+   </td>
+  </tr>
+  <tr>
+   <td><p style="text-align: right">
+101</p>
+
+   </td>
+   <td>Residential building
+   </td>
+   <td>Roofs (not footprints) of apartment buildings. Multistorey building 
+   </td>
+   <td><img src="https://aeronetlab.space/img/class_img/101.png"/>
+   </td>
+   <td>
+   </td>
+  </tr>
+
+  <tr>
+   <td><p style="text-align: right">
+102</p>
+
+   </td>
+   <td>House
+   </td>
+   <td>
+   </td>
+   <td><img src="https://aeronetlab.space/img/class_img/102.png" />
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td><p style="text-align: right">
+103</p>
+
+   </td>
+   <td>Industrial building
+   </td>
+   <td>Plants, etc.
+   </td>
+   <td><img src="https://aeronetlab.space/img/class_img/103.png" />
+   </td>
+   <td>
+   </td>
+  </tr>
+ 
+  <tr>
+   <td><p style="text-align: right">
+105</p>
+
+   </td>
+   <td>Other non-residential buildings
+   </td>
+   <td>Garages, hangars, etc. - mostly small non-residential buildings
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+  </tr>
+
+
+  <tr>
+   <td colspan="5" >
+<h2>Emergency and risk management</h2>
+
+
+   </td>
+  </tr>
+  <tr>
+   <td><p style="text-align: right">
+801</p>
+
+   </td>
+   <td>Destroyed building
+   </td>
+   <td>
+   </td>
+   <td><img src="https://aeronetlab.space/img/class_img/801.png" />
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td><p style="text-align: right">
+802</p>
+
+   </td>
+   <td>Damaged building
+   </td>
+   <td>
+   </td>
+   <td><img src="https://aeronetlab.space/img/class_img/802.png" />
+   </td>
+   <td>
+   </td>
+  </tr>
+ </table>
