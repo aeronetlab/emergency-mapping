@@ -9,7 +9,7 @@ Here are some useful utils and a sample pipeline for dataset of California regio
 
 Utils allow to read and write the files (data_handling.py), and also contain a simple convolutional network on Keras (unet.py) with a generator for training and validation, and a Jupyter notebook with a sample pipeline of the data processing.
 
-Datataset is based on Opendata DigitalGlobe (Maxar) imagery and is available for [download](https://minio.aeronetlab.space/public/datasets/emergency/California_2017.zip).
+Datataset is based on Opendata DigitalGlobe (Maxar) imagery and is available for **[download]**(https://minio.aeronetlab.space/public/datasets/emergency/California_2017.zip).
 This dataset contains satellite imagery before and after the events and a labeled data.
 
 Data:
