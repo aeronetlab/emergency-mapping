@@ -9,8 +9,9 @@ Here are some useful utils and a sample pipeline for dataset of California regio
 
 Utils allow to read and write the files (data_handling.py), and also contain a simple convolutional network on Keras (unet.py) with a generator for training and validation, and a Jupyter notebook with a sample pipeline of the data processing.
 
-Datataset is based on Opendata DigitalGlobe (Maxar) imagery and is available for **[download]**(https://minio.aeronetlab.space/public/datasets/emergency/California_2017.zip).
-This dataset contains satellite imagery before and after the events and a labeled data.
+Datataset is based on Opendata DigitalGlobe (Maxar) imagery and is available for [download](https://minio.aeronetlab.space/public/datasets/emergency/California_2017.zip).
+
+The dataset contains satellite imagery before and after the events and a labeled data.
 
 Data:
 1. Images with the labels:
@@ -68,7 +69,8 @@ Data is licensed by DigitalGlobe under the terms of their Opendata programm: "Th
 
 # Florida 2018
 
-This dataset (~12K buildings with damage classes) is based on Google open aerial imagery after hurricane Michael hitted Florida coast. 
+This dataset (~12K buildings with damage classes) is based on Google open aerial imagery after hurricane Michael hitted Florida coast. [download](https://minio.aeronetlab.space/public/datasets/emergency/Florida_2018.zip).
+
 Each of the labeled buildings has a geometrical contour and the appropirate class assignment whether it has no visible damages or was fully destroyed or partly damaged. 
 <table>
   <tr>
