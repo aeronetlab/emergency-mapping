@@ -18,7 +18,7 @@ Data:
 - ventura_train
 - santa_rosa_train
 
-contain 2 RGB images (pre- and post- event) organized in 3 seaprate bands each (pre_r, pre_g, pre_b etc.)
+contains 2 RGB images (pre- and post- event) organized in 3 seaprate bands each (pre_r, pre_g, pre_b etc.)
 and 3 raster masks of hte ground truth for the classes:
 - all: all the buildings present in the pre_ image
 - non_burned: all the buildings present in both pre_ and post_ images
